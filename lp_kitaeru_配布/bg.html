@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字と画像を重ねる</title>
+    <style>
+        .mainV{
+            position: relative;
+            background: url("images/main_5.jpg");
+            width: 1400px;
+            height: 580px;
+        }
+        .mainV::before{
+            content: "これなんだ";
+            position: absolute;
+            background: rgba(0,0,0,0.5);
+            top:0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        .mainT{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 8rem;
+            color: #fff;
+        }
+        .huchi-txt{
+            text-shadow: 
+                0 0 10px #000,
+                0 0 10px #000,
+                0 0 10px #000,
+                0 0 10px #000,
+                0 0 10px #000,
+                0 0 10px #000;
+        }
+    </style>
+</head>
+<body>
+    <head></head>
+    <main>
+        <section>
+            <div class="mainV">
+                <div class="mainT huchi-txt">poripori</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
